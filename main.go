@@ -1,4 +1,4 @@
- *
+/*
  *   http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
@@ -23,25 +23,25 @@ func main() {
 	http.HandleFunc("/red", redHandler)
 	http.ListenAndServe(":8080", nil)
 }
-func redHandler(w http.ResponseWriter, r *http.Request) { 
-	img := image.NewRGBA(image.Rect(0, 0, 100, 100)) 
-	draw.Draw(img, img.Bounds(), &image.Uniform{color.RGBA{255, 0, 0, 255}}, image.ZP, draw.Src) 
+func redHandler(w http.ResponseWriter, r *http.Request) {
+	img := image.NewRGBA(image.Rect(0, 0, 100, 100))
+	draw.Draw(img, img.Bounds(), &image.Uniform{color.RGBA{255, 0, 0, 255}}, image.ZP, draw.Src)
 	http.HandleFunc("/red", redHandler)
-	w.Header().Set("Content-Type", "image/png") 
-	png.Encode(w, img) 
+	w.Header().Set("Content-Type", "image/png")
+	png.Encode(w, img)
 }
-func redHandler(w http.ResponseWriter, r *http.Request) { 
-	img := image.NewRGBA(image.Rect(0, 0, 100, 100)) 
-	draw.Draw(img, img.Bounds(), &image.Uniform{color.RGBA{255, 0, 0, 255}}, image.ZP, draw.Src) 
-	w.Header().Set("Content-Type", "image/png") 
-	png.Encode(w, img) 
+func redHandler(w http.ResponseWriter, r *http.Request) {
+	img := image.NewRGBA(image.Rect(0, 0, 100, 100))
+	draw.Draw(img, img.Bounds(), &image.Uniform{color.RGBA{255, 0, 0, 255}}, image.ZP, draw.Src)
+	w.Header().Set("Content-Type", "image/png")
+	png.Encode(w, img)
 }
 
-func redHandler(w http.ResponseWriter, r *http.Request) { 
-	img := image.NewRGBA(image.Rect(0, 0, 100, 100)) 
-	draw.Draw(img, img.Bounds(), &image.Uniform{color.RGBA{255, 0, 0, 255}}, image.ZP, draw.Src) 
-	w.Header().Set("Content-Type", "image/png") 
-	png.Encode(w, img) 
+func redHandler(w http.ResponseWriter, r *http.Request) {
+	img := image.NewRGBA(image.Rect(0, 0, 100, 100))
+	draw.Draw(img, img.Bounds(), &image.Uniform{color.RGBA{255, 0, 0, 255}}, image.ZP, draw.Src)
+	w.Header().Set("Content-Type", "image/png")
+	png.Encode(w, img)
 }
 func blueHandler(w http.ResponseWriter, r *http.Request) {
 	img := image.NewRGBA(image.Rect(0, 0, 100, 100))
